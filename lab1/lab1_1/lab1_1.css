@@ -1,0 +1,14 @@
+.columns {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    gap: 50px 50px ;
+    margin: 40px auto;
+    grid-row: 1 / 1 span;
+}
+
+.column {
+    margin: 0 auto;
+    height: 100%;
+}
