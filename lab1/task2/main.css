@@ -2,6 +2,8 @@
 .logo{
     margin-left: auto;
     margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .logo img {
@@ -21,6 +23,7 @@
 }
 
 .image1{
+    margin: 10px;
     display: grid;
     grid-row: 2/ 1 span;
     margin-left: auto;
@@ -28,6 +31,7 @@
     width: 800px;
 }
 .image2{
+    margin: 10px;
     display: grid;
     grid-row: 3/ 1 span;
     margin-left: auto;
@@ -35,6 +39,7 @@
     width: 800px;
 }
 .image3{
+    margin: 10px;
     display: grid;
     grid-row: 4/ 1 span;
     margin-left: auto;
