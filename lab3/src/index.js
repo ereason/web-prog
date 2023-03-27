@@ -1,12 +1,20 @@
 import _ from 'lodash';
 
-function component() {
-    const element = document.createElement('div');
+import Swiper, { Navigation, Pagination } from 'swiper';
+// import Swiper and modules styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
-    // Lodash, now imported by this script
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+const swiper = new Swiper('.mySwiper', {
+    loop: true,
 
-    return element;
-}
+    pagination: {
+        el: '.swiper-pagination',
+    },
 
-document.body.appendChild(component());
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    }
+});
