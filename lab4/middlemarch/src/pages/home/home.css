@@ -1,0 +1,25 @@
+.carousel-item img {
+  max-width: 1200px;
+  margin: 10px 50px;
+}
+
+.carousel{
+  margin: 50px;
+}
+
+.mainTitle{
+  color: #e3dec6!important;
+  text-shadow: 2px 1px 5px #3d348b!important;
+}
+
+.subTitle{
+  color: #dec486 !important;
+  text-shadow: 2px 1px 5px #3d348b!important;
+}
+
+input::placeholder {
+  color: #3d348b;
+}
+#main-panel{
+  background-color: rgb(0,0,0, 0.0);
+}

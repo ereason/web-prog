@@ -1,0 +1,42 @@
+.container {
+  max-width: 960px;
+
+  position: sticky;
+  color: #7678ED;
+  z-index: 2000;
+  margin-top: 20px;
+  padding-bottom: 50px;
+
+  background: #e3dec6;
+  border-radius: 25px;
+  filter: drop-shadow(0 0 0.75rem rgba(61, 52, 139, 0.8));
+}
+
+h4, h4 .text-primary {
+  color: #7678ED !important;
+}
+
+.form-control {
+  font-size: 1rem;
+  background-color: rgba(232, 130, 72, 0.8);
+  color: #ffffff;
+  border: 1px solid #F35B04;
+}
+
+.input-group-text {
+  background-color: #eee;
+  color: #7678ED;
+  border-color: #F35B04;
+}
+
+.list-group-item {
+  background-color: #eee;
+}
+
+.btn-primary{
+  background-color: #7678ED;
+}
+
+.btn-secondary{
+  background-color: #7678ED;
+}
