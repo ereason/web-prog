@@ -22,6 +22,7 @@ export default {
                     imageURL: [
                         "https://i-point.ru/storage/gallery/big/2707.jpg",
                         "https://i-point.ru/storage/gallery/big/2709.jpg",
+                        "https://i-point.ru/storage/gallery/big/2721.jpg",
                     ],
                     price: "93 990",
                     discountPrice: "73 990",

@@ -1,5 +1,7 @@
 <script setup>
 import {defineProps} from 'vue'
+import {VueperSlides, VueperSlide} from 'vueperslides'
+import 'vueperslides/dist/vueperslides.css'
 
 const props = defineProps({
     cards: {
@@ -10,20 +12,28 @@ const props = defineProps({
         type: Function,
         required: false
     }
-})
 
-const d = (id, name) => {
-    alert("id: " + id + "; name: " + name)
-}
+
+})
 
 </script>
 
 <template>
+
     <div class="template">
+
         <template v-for="i in cards">
-            <button class="cards" v-on:click="actionHandler(i)">
+            <div class="cards" v-on:click="actionHandler(i)">
                 <p class="category">{{ i.category }}</p>
-                <img class="image" v-bind:src="i.imageURL[0]"/>
+
+                <vueper-slides class="no-shadow carousel" :gap="2" :slideImageInside="false" v-on:click.stop
+                               :infinite="false" :parallax="0" :slide-ratio="1 / 1" :arrows="false">
+                    <vueper-slide class="image"
+                                  v-for="j in i.imageURL"
+                                  :image="j">
+                    </vueper-slide>
+                </vueper-slides>
+
                 <p class="productName">{{ i.productName }}</p>
 
                 <p v-if="i.isAvailable">Нет в наличии</p>
@@ -32,11 +42,10 @@ const d = (id, name) => {
                     {{ i.currency }}</p>
 
                 <p class="rating">рейтинг: {{ i.rating }}</p>
-            </button>
+            </div>
         </template>
     </div>
 </template>
-
 
 <style scoped>
 
@@ -57,25 +66,26 @@ const d = (id, name) => {
     border: 2px solid #95d5b2;
     border-radius: 25px;
     margin: 10px;
+
 }
 
 .category {
     font-size: 0.8rem;
     color: #b7e4c7;
+
+}
+
+.carousel {
+
+
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .image {
-    display: block;
-
-    width: 100%;
-    height: auto;
-
     border-radius: 25px;
     border: 5px solid #b7e4c7;
-
-    margin-left: auto;
-    margin-right: auto;
-
+    border-radius: 25px;
 }
 
 .productName {
